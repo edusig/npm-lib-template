@@ -1,14 +1,17 @@
 # NPM Library Template
 
-This repo is a template for creating CommonJS and ESM packages using Typescript to release on NPM.
+This repo is a template for creating CommonJS and ESM packages using Typescript to publish on NPM.
+
+It is intended to be used for Node.js packages
 
 - It uses `tsc` to transpile to CommonJS and `rollup` to build the ESM packages.
 - Has a default MIT license
-- Eslint rules from [@edusig/eslint-config](https://github.com/edusig/eslint-config)
-- Prettier and EditorConfig
+- [Eslint](https://eslint.org/) rules from [@edusig/eslint-config](https://github.com/edusig/eslint-config)
+- [Prettier](https://prettier.io/) and [EditorConfig](https://editorconfig.org/) for code formatting
+- [Jest](https://jestjs.io/) for testing (with [ts-jest](https://kulshekhar.github.io/ts-jest/))
 - Github Actions with:
   - Release: using [release-please](https://github.com/googleapis/release-please) that automates CHANGELOG generation
-  - Testing: as a default it just run lint
+  - Testing: as a default it checks the linter and runs test script
 
 ## Before Publish Checklist
 
@@ -16,8 +19,6 @@ This repo is a template for creating CommonJS and ESM packages using Typescript 
 - [ ] Update `rollup.config.js` external packages
 - [ ] Update `src/external.ts` to include all the lib files
 - [ ] Update `src/index.ts` line 4 to export a named module (optional)
-- [ ] Update github actions
-  - [ ] Add tests
 - [ ] Add Repo Secrets
   - [ ] Add GITHUB_TOKEN (release please uses this to open a PR with new changes)
   - [ ] Add NPM_TOKEN (release please uses this to publish a new package to NPM)
