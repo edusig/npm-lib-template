@@ -1,5 +1,8 @@
 # NPM Library Template
 
+![tests badge](https://github.com/edusig/npmm-lib-template/actions/workflows/tests.yml/badge.svg)
+![release badge](https://github.com/edusig/npmm-lib-template/actions/workflows/release.yml/badge.svg)
+
 This repo is a template for creating CommonJS and ESM packages using Typescript to publish on NPM.
 
 It is intended to be used for Node.js packages
